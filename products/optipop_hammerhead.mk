@@ -36,4 +36,9 @@ TARGET_KERNEL_CONFIG := optipop_hammerhead_defconfig
 PRODUCT_COPY_FILES += \
     vendor/optipop/prebuilt/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
 
+
+# Proprietary libmmcamera_interface.so because of green bar bug
+PRODUCT_COPY_FILES += \
+    vendor/optipop/prebuilt/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so
+
 endif
