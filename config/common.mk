@@ -62,3 +62,9 @@ PRODUCT_COPY_FILES += \
     vendor/optipop/prebuilt/addon.d/50-optipop.sh:system/addon.d/50-optipop.sh \
     vendor/optipop/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/optipop/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh
+
+#Apps
+PRODUCT_COPY_FILES += \
+    vendor/optipop/prebuilt/app/Cabinet/Cabinet.apk:system/app/Cabinet/Cabinet.apk \
+    vendor/optipop/prebuilt/app/QuickBoot/QuickBoot.apk:system/app/QuickBoot/QuickBoot.apk
+
