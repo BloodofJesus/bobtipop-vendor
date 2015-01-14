@@ -12,11 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# Add extra libs for the compilers to use graphite flag optimizations before any packages get built
-export LD_LIBRARY_PATH := $(ANDROID_BUILD_TOP)/prebuilts/sm/lib
-export LIBRARY_PATH := $(ANDROID_BUILD_TOP)/prebuilts/sm/lib
-
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -43,6 +38,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.use_intro_anim=false \
     dalvik.vm.profiler=1 \
     dalvik.vm.isa.arm.features=lpae,div
+
+
 
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/optipop/overlay/common
