@@ -53,12 +53,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# Prebuilt webview files to fix FCs
-PRODUCT_COPY_FILES += \
-    vendor/optipop/prebuilt/lib/libwebviewchromium.so:system/lib/libwebviewchromium.so \
-    vendor/optipop/prebuilt/lib/libwebviewchromium_loader.so:system/lib/libwebviewchromium_loader.so \
-    vendor/optipop/prebuilt/lib/libwebviewchromium_plat_support.so:system/lib/libwebviewchromium_plat_support.so
-
 # Proprietary latinime lib needed for swyping
 PRODUCT_COPY_FILES += \
     vendor/optipop/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
