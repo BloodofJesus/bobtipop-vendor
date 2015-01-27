@@ -40,8 +40,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.profiler=1 \
     dalvik.vm.isa.arm.features=lpae,div
 
-
-
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/optipop/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/optipop/overlay/$(TARGET_PRODUCT)
@@ -63,10 +61,6 @@ PRODUCT_COPY_FILES += \
     vendor/optipop/prebuilt/addon.d/50-optipop.sh:system/addon.d/50-optipop.sh \
     vendor/optipop/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/optipop/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh
-
-#Apps
-PRODUCT_COPY_FILES += \
-    vendor/optipop/prebuilt/app/Cabinet/Cabinet.apk:system/app/Cabinet/Cabinet.apk
 
 # QuickBoot (included automagically for non-oppo qcom devices)
 PRODUCT_PACKAGES += \
