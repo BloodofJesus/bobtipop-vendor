@@ -87,7 +87,7 @@ ifeq (true,$(KRAIT_TUNINGS))
 OPT4 := (krait)
 endif
 
-ifeq (true,$(KRAIT_TUNINGS))
+ifeq (true,$(ENABLE_GCCONLY))
 OPT5 := (gcconly)
 endif
 
