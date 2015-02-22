@@ -1,3 +1,17 @@
+# Copyright (C) 2014-2015 The SaberMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Written for SaberMod toolchains
 # Find host os
 
@@ -68,6 +82,35 @@ SM_AND_VERSION := $(SM_AND_NAME)-$(SM_AND_DATE)-$(SM_AND_STATUS)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.android=$(SM_AND_VERSION)
 endif
+# Graphite flags and friends for ROM
+GRAPHITE_FLAGS := \
+      -fgraphite \
+      -fgraphite-identity \
+      -floop-flatten \
+      -floop-parallelize-all \
+      -ftree-loop-linear \
+      -floop-interchange \
+      -floop-strip-mine \
+      -floop-block
+
+LOCAL_DISABLE_GRAPHITE := \
+	libunwind \
+	libFFTEm \
+	libicui18n \
+	libskia \
+	libvpx \
+	libmedia_jni \
+	libstagefright_mp3dec \
+	libart \
+	libstagefright_amrwbenc \
+	libpdfium \
+	libpdfiumcore \
+	libwebviewchromium \
+	libwebviewchromium_loader \
+	libwebviewchromium_plat_support \
+	libjni_filtershow_filters \
+	fio \
+	libwebrtc_spl
 
 ifeq (true,$(GRAPHITE_OPTS))
 OPT1 := (graphite)
